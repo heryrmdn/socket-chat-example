@@ -37,7 +37,7 @@ const combinedFileTransport = new DailyRotateFile({
   format: fileFormat,
   datePattern: 'YYYY-MM-DD-HH',
   maxSize: '2m',
-  dirname: './src/logs/combined',
+  dirname: './logs/combined',
   maxFiles: '14d'
 })
 
@@ -47,7 +47,7 @@ const errorFileTransport = new DailyRotateFile({
   format: fileFormat,
   datePattern: 'YYYY-MM-DD-HH',
   maxSize: '2m',
-  dirname: './src/logs/errors',
+  dirname: './logs/errors',
   maxFiles: '14d'
 })
 
