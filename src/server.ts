@@ -1,6 +1,6 @@
 import { createServer } from 'node:http'
 import app from './app'
-import config from './config/env.config'
+import config from './config/config'
 import { ErrorHandler } from './util/error.util'
 import { Server } from 'socket.io'
 import sqlite3 from 'sqlite3'
