@@ -81,17 +81,7 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault()
       if (input.value) {
-        try {
-          const response = await socket
-            .timeout(5000)
-            .emitWithAck('request', input.value)
-
-          console.log('response: ', response)
-
-          input.value = ''
-        } catch (err) {
-          console.error('err: ', err)
-        }
+        
       }
     })
 
@@ -111,16 +101,16 @@
         alert('Error')
       }
 
-      const item = document.createElement('li')
-      item.textContent = msg
-      messages.appendChild(item)
-      window.scrollTo(0, document.body.scrollHeight)
-
       callback({
         status: 200,
         message: 'OK',
         data: msg,
       })
+
+      const item = document.createElement('li')
+      item.textContent = msg
+      messages.appendChild(item)
+      window.scrollTo(0, document.body.scrollHeight)
     })
   </script>
 </body>
